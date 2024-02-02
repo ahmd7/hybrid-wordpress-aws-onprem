@@ -30,13 +30,13 @@ Before setting up the hybrid WordPress application, ensure you have the followin
    cd hybrid-wordpress-aws-onprem
    ```
 
-2. run this line to make the file `wordpressdeployment.sh' executable.
+2. run this line to make the file `wordpressdeployment.sh`` executable.
 
    ```bash
    chmod +x wordpressdeployment.sh
    ```
 
-3. execute `the wordpressdeployment.sh` file
+3. execute the `wordpressdeployment.sh` file
 
    ```bash
    ./wordpressdeployment.sh
@@ -104,7 +104,7 @@ our work with aws is done.
    `user` : the user on EC2 
 
    `EC2-IP` : the public IP of EC2 instance
-   
+
 ## Make sure that all done
 write the `http://public-ip` in your browser. This window should appear
 
