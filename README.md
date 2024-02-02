@@ -21,23 +21,29 @@ Before setting up the hybrid WordPress application, ensure you have the followin
 - On-premises server with vSphere (your pc with virtualization tool will be fine ex. virtualbox, docker) hosting the database
 - Internet connection on your on-premises servers
 
-## AWS-part-of-the-project
+## AWS part of then project
 
 1. Clone this repository to your aws machine:
 
    ```bash
    git clone https://github.com/yourusername/hybrid-wordpress-aws-onprem.git
    cd hybrid-wordpress-aws-onprem
+   ```
+
 2. run this line to make the file `wordpressdeployment.sh' executable.
+
    ```bash
    chmod +x wordpressdeployment.sh
    ```
 
 3. execute `the wordpressdeployment.sh` file
+
    ```bash
    ./wordpressdeployment.sh
    ```
+
 4. modify the /var/www/html/wp-config to make it like this
+
    ```php
    // wp-config.php
 
@@ -46,7 +52,9 @@ Before setting up the hybrid WordPress application, ensure you have the followin
    define('DB_PASSWORD', 'password');
    define('DB_HOST', 'localhost:port-for-reverse-ssh');
    ```
+
     if you tried to connect to the web page via public ip this page will appear.
+
  ![Screenshot](images/error.png)
 
 5. Open port `port-for-reverse-ssh` in the security group of the EC2.
@@ -57,22 +65,30 @@ our work with aws is done.
 ## Configuration of Database
 
 1. Clone this repository to your on-prem VM:
+
    ```bash
    git clone https://github.com/yourusername/hybrid-wordpress-aws-onprem.git
    cd hybrid-wordpress-aws-onprem
    ```
+
 2. run this line to make the script executable.
+
    ```bash
    chmod +x databasescript.sh
    ```
+
 3. execute `the wordpressdeployment.sh` file
+
    ```bash
    ./databasescript.sh
    ```
+
 4. open `etc/mysql/mariadb.conf.d/50-server.cnf` file and comment this line
+
    ```bash
    bind IP 127.0.0.1
    ```
+
 if you tried to connect to the web page via public ip this page will appear.
 
  ![error](images/error.jpg)
@@ -82,9 +98,11 @@ if you tried to connect to the web page via public ip this page will appear.
 ## Reverse-ssh
 
     run this command on your VM (DB) :
+
    ```bash
    ssh -i "key-path" port-for-reverse-ssh:localhost:3306 user@EC2-IP -N -R
    ```
+   
    `key-path`: provide the EC2 key file path
 
    `port-for-reverse-ssh` : the port that opened on **security group** on AWS
