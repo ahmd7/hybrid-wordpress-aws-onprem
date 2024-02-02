@@ -91,7 +91,7 @@ our work with aws is done.
 
 ## Reverse-ssh
 
-    run this command on your VM (DB) :
+run this command on your VM (DB) :
 
    ```bash
    ssh -i "key-path" port-for-reverse-ssh:localhost:3306 user@EC2-IP -N -R
