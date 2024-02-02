@@ -71,13 +71,13 @@ our work with aws is done.
    cd hybrid-wordpress-aws-onprem
    ```
 
-2. run this line to make the script executable.
+2. run this line to make the `databasescript.sh` file executable.
 
    ```bash
    chmod +x databasescript.sh
    ```
 
-3. execute `the wordpressdeployment.sh` file
+3. execute the `databasescript.sh` file
 
    ```bash
    ./databasescript.sh
