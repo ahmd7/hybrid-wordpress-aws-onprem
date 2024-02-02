@@ -55,7 +55,7 @@ Before setting up the hybrid WordPress application, ensure you have the followin
 
     if you tried to connect to the web page via public ip this page will appear.
 
- ![Screenshot](images/error.png)
+   ![Screenshot](images/error.jpg)
 
 5. Open port `port-for-reverse-ssh` in the security group of the EC2.
 
@@ -89,12 +89,6 @@ our work with aws is done.
    bind IP 127.0.0.1
    ```
 
-if you tried to connect to the web page via public ip this page will appear.
-
- ![error](images/error.jpg)
-
-4. Open port `port-for-reverse-ssh` in the security group of the EC2.
-
 ## Reverse-ssh
 
     run this command on your VM (DB) :
@@ -110,6 +104,7 @@ if you tried to connect to the web page via public ip this page will appear.
    `user` : the user on EC2 
 
    `EC2-IP` : the public IP of EC2 instance
+   
 ## Make sure that all done
 write the `http://public-ip` in your browser. This window should appear
 
