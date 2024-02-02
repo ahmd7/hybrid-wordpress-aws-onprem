@@ -30,7 +30,7 @@ Before setting up the hybrid WordPress application, ensure you have the followin
    cd hybrid-wordpress-aws-onprem
    ```
 
-2. run this line to make the file `wordpressdeployment.sh`` executable.
+2. run this line to make the file `wordpressdeployment.sh` executable.
 
    ```bash
    chmod +x wordpressdeployment.sh
