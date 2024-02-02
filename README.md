@@ -42,7 +42,7 @@ Before setting up the hybrid WordPress application, ensure you have the followin
    ./wordpressdeployment.sh
    ```
 
-4. modify the /var/www/html/wp-config to make it like this
+4. modify the `/var/www/html/wp-config` to make it like this
 
    ```php
    // wp-config.php
